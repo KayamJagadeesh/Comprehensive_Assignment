@@ -8,7 +8,7 @@ pipeline {
                 bat "mvn clean -f  Comprehensive_Assignment"
             }
         }
-        post {
+        stage {
             success {
                 junit '**/target/surfire-report/TEST-*.xml'
                 archeiveArtifacts 'target/*.jar'
