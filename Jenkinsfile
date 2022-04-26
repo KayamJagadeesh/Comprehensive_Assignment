@@ -8,13 +8,6 @@ pipeline {
                 bat "mvn clean -f  Comprehensive_Assignment"
             }
         }
-        stage('post') {
-            stepss {
-                junit '**/target/surfire-report/TEST-*.xml'
-                archeiveArtifacts 'target/*.jar'
-        
-            }
-        }
     }   
 }
         
