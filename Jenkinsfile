@@ -8,6 +8,21 @@ pipeline {
                 bat "mvn clean -f  Comprehensive_Assignment"
             }
         }
+        stage('install') {
+            steps {
+                bat "mvn install -f Comprehensive_Assignment"
+            }
+        }
+        stage('test') {
+            steps {
+                bat "mvn test -f Comprehensive_Assignment"
+            }
+        }
+        stage('package') {
+            steps {
+                bat "mvn package -f Comprehensive_Assignment"
+            }
+        }
         
     }
 }
