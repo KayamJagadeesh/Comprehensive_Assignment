@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('post') {
-            success {
+            stepss {
                 junit '**/target/surfire-report/TEST-*.xml'
                 archeiveArtifacts 'target/*.jar'
         
